@@ -1,0 +1,153 @@
+body {
+    height: auto;
+    background-color: black;
+}
+
+
+/*  SECTION: OVERLAY    */
+
+#landing-page-overlay {
+    height: 100vh;
+    background-image: url("https://www.uniquevenuesoflondon.co.uk/sites/default/files/cover/Lincoln's%20Inn%20-%20011%20(unwatermarked)%20-%20AS%20(2000x1333px).jpg");
+    margin: -1vw;
+    opacity: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay-centre-boxes {
+    width: 30vw;
+    height: 30vh;
+    top: 25vh;
+    left: 35vw;
+    position: relative;
+}
+
+/* Parent div to following unanchored children */
+#overlay-name-background {
+    background-color: black;
+    opacity: 65%;
+}
+
+/* This distinction was made so the 'child' could keep 100% opacity
+ since CSS doesn't support children overriding parent opacity values.
+ This box matches the 'parent' exactly in dimensions. */
+#overlay-name-box {
+    opacity: 100%;
+    top: -5vh;
+    text-align: center;
+    color: white;
+    margin: 2vw;
+    width: 25vw;
+    height: 20vh;
+}
+
+#overlay-name {
+    font-size: 3vw;
+    font-family: PrettyText;
+}
+
+#overlay-subtitle {
+    font-size: 1.1vw;
+    font-family: Subtitle;
+}
+
+
+
+/*  BUTTONS */
+
+/* From Uiverse.io by vinodjangid07 */
+
+#overlay-button-box {
+    top: -11vh;
+    left: 45vw;
+    width: 10vw;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+}
+
+#overlay-button {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 0px 15px 4px #c8a2c8;
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+#overlay-icon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+#overlay-icon {
+    fill: white;
+}
+
+path {
+    fill: white;
+}
+
+#overlay-button:hover {
+    width: 10vw;
+    border-radius: 50px;
+    transition-duration: .5s;
+    background-color: #c8a2c8;
+    align-items: center;
+    font-family: Subtitle;
+    box-shadow: 1px 0px 5px 4px #c8a2c8;
+    border: 2px solid pink;
+
+}
+
+#overlay-button:hover #overlay-icon {
+    /* width: 20px; */
+    transition-duration: 0.5s;
+    transform: translateY(-250%);
+}
+
+#overlay-button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Enter";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+}
+
+#overlay-button:hover::before {
+    font-size: 1.1em;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.5s
+}
+
+
+
+/*  SECTION: FONTS  */
+
+@font-face {
+    font-family: PrettyText;
+    src: url("fonts/BrockScript.ttf");
+}
+
+@font-face {
+    font-family: Subtitle;
+    src: url(fonts/neris/Neris-Thin.otf);
+}
+
+@font-face {
+    font-family: GeneralText;
+    src: url(fonts/neris/Neris-Light.otf);
+}
