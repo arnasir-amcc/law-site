@@ -40,7 +40,7 @@ body {
 #overlay-name-background {
     background-color: black;
     opacity: 65%;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease, transform 4s ease;
 }
 
 /* This distinction was made so the 'child' could keep 100% opacity
@@ -68,6 +68,13 @@ body {
 }
 
 
+/*  SECTION: ABOUT PAGE */
+
+.navigation-tabs {
+    color: white;
+    border: 1px solid red;
+}
+
 
 /*  BUTTONS */
 
@@ -81,7 +88,7 @@ body {
     display: flex;
     justify-content: center;
     opacity: 0.5;
-    transition: transform 8s ease;
+    transition: opacity 1s ease, transform 8s ease;
 }
 
 #overlay-button {

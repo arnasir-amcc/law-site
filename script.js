@@ -57,6 +57,14 @@ button.addEventListener('click', function() {
     landingOverlay.style.transform = 'translateY(-100vh)';
     text.style.transform = 'translateY(-20vh)';
     button.style.transform = 'translateY(-100vh)';
+    overlayNameBackground.style.transform = 'translateY(-100vh)';
+    button.style.opacity = '0';
+
+    setTimeout(() => {
+        landingOverlay.style.display = 'none';
+        button.style.display = 'none';
+        overlayNameBackground.style.display = 'none';
+    }, 4000);
 });
 
 
