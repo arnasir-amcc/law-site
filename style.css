@@ -16,7 +16,8 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    transition: opacity 0.3s ease, top 1s ease;
+    transition: opacity 1s ease, transform 4s ease;
+    opacity: 0;
 
 }
 
@@ -31,6 +32,8 @@ body {
     top: 25vh;
     left: 35vw;
     position: absolute;
+
+    transition: opacity 1.0s ease;
 }
 
 /* Parent div to following unanchored children */
@@ -50,6 +53,8 @@ body {
     margin: 2vw;
     width: 25vw;
     height: 20vh;
+    transition: color 0.5s, transform 4s ease;
+    left: 35.5vw;
 }
 
 #overlay-name {
@@ -75,6 +80,8 @@ body {
     height: 7vh;
     display: flex;
     justify-content: center;
+    opacity: 0.5;
+    transition: transform 8s ease;
 }
 
 #overlay-button {
@@ -109,13 +116,13 @@ path {
 
 #overlay-button:hover {
     width: 10vw;
-    border-radius: 50px;
+    border-radius: 20px;
     transition-duration: .5s;
     background-color: #c8a2c8;
     align-items: center;
     font-family: Subtitle;
     box-shadow: 1px 0px 5px 4px #c8a2c8;
-    border: 2px solid pink;
+    border: 1px solid pink;
 
 }
 

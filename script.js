@@ -1,3 +1,13 @@
+function fadeIn() {
+    // Fade in #landing-page-overlay first
+    const overlay = document.getElementById('landing-page-overlay');
+    overlay.style.opacity = 1; // Manually set opacity to 1
+
+}
+
+
+
+
 function injectFooter() {
     // Create the <footer> tag.
     const footer = document.createElement('footer');
@@ -13,19 +23,11 @@ function injectFooter() {
     document.body.appendChild(footer);
 }
 
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('overlay-button').addEventListener('click', function() {
-        document.getElementById('landing-page-overlay').classList.add('overlay-remove');
-        console.log("Overlay removed.");
-    });
-});
-
 const overlayBoxes = document.querySelectorAll('.overlay-centre-boxes');
 const landingOverlay = document.getElementById('landing-page-overlay');
 const overlayNameBackground = document.getElementById('overlay-name-background');
+const button = document.getElementById('overlay-button-box');
+const text = document.getElementById('overlay-name-box');
 
 // Loop through each .overlay-centre-boxes to add the hover events
 overlayBoxes.forEach(box => {
@@ -33,6 +35,7 @@ overlayBoxes.forEach(box => {
   box.addEventListener('mouseover', function() {
     overlayNameBackground.style.opacity = '0.8';
     landingOverlay.style.opacity = '0.5'; // Change the opacity of the parent
+    text.style.opacity = 1;
   });
 
   // Add event listener for when the mouse leaves (mouse out)
@@ -40,6 +43,20 @@ overlayBoxes.forEach(box => {
     overlayNameBackground.style.opacity = '0.65';
     landingOverlay.style.opacity = '1'; // Reset the opacity of the parent
   });
+});
+
+button.addEventListener('mouseover', function() {
+    button.style.opacity = 1;
+});
+
+button.addEventListener('mouseout', function() {
+    button.style.opacity = 0.5;
+});
+
+button.addEventListener('click', function() {
+    landingOverlay.style.transform = 'translateY(-100vh)';
+    text.style.transform = 'translateY(-20vh)';
+    button.style.transform = 'translateY(-100vh)';
 });
 
 
