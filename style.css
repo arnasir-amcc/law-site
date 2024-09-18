@@ -6,6 +6,7 @@ body {
 
 /*  SECTION: OVERLAY    */
 
+
 #landing-page-overlay {
     height: 100vh;
     background-image: url("https://www.uniquevenuesoflondon.co.uk/sites/default/files/cover/Lincoln's%20Inn%20-%20011%20(unwatermarked)%20-%20AS%20(2000x1333px).jpg");
@@ -14,6 +15,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+    transition: opacity 0.3s ease, top 1s ease;
+
+}
+
+/*  Added to class list in JavaScript on click event  */
+.overlay-remove {
+    top: -120vh; 
 }
 
 .overlay-centre-boxes {
@@ -21,13 +30,14 @@ body {
     height: 30vh;
     top: 25vh;
     left: 35vw;
-    position: relative;
+    position: absolute;
 }
 
 /* Parent div to following unanchored children */
 #overlay-name-background {
     background-color: black;
     opacity: 65%;
+    transition: opacity 1s ease;
 }
 
 /* This distinction was made so the 'child' could keep 100% opacity
@@ -35,7 +45,6 @@ body {
  This box matches the 'parent' exactly in dimensions. */
 #overlay-name-box {
     opacity: 100%;
-    top: -5vh;
     text-align: center;
     color: white;
     margin: 2vw;
@@ -49,7 +58,7 @@ body {
 }
 
 #overlay-subtitle {
-    font-size: 1.1vw;
+    font-size: 1vw;
     font-family: Subtitle;
 }
 
@@ -60,7 +69,7 @@ body {
 /* From Uiverse.io by vinodjangid07 */
 
 #overlay-button-box {
-    top: -11vh;
+    top: 47vh;
     left: 45vw;
     width: 10vw;
     height: 7vh;
