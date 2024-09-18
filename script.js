@@ -29,6 +29,7 @@ const overlayNameBackground = document.getElementById('overlay-name-background')
 const button = document.getElementById('overlay-button-box');
 const text = document.getElementById('overlay-name-box');
 const navigationTabs = document.querySelectorAll('.navigation-tabs');
+const mainDiv = document.getElementsByClassName('page-margin');
 
 // Loop through each .overlay-centre-boxes to add the hover events
 overlayBoxes.forEach(box => {
@@ -65,12 +66,10 @@ button.addEventListener('click', function () {
         landingOverlay.style.display = 'none';
         button.style.display = 'none';
         overlayNameBackground.style.display = 'none';
-
-        for (let i = 0; i < navigationTabs.length; i++) {
-            navigationTabs[i].style.display = 'block';
-        }
+        mainDiv.style.display = 'block';
 
     }, 4000);
+
 });
 
 

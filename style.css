@@ -150,32 +150,79 @@ path {
 
 /*  SECTION: ABOUT PAGE */
 
+#about {
+    margin-top: 10vh;
+    color: white;
+    padding: 3vh;
+    font-size: 1.1rem;
+}
+
+#about-picture {
+    float: left;
+    background-image: url(media/portrait.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 20vw;
+    height: 50vh;
+    margin: 3vh;
+}
+
+#about-title {
+    font-size: 3rem;
+    font-family: PrettyText;
+    text-decoration: underline 1px;
+    text-underline-offset: .5vh;
+    text-decoration-color: purple;
+    color: #c8a2c8;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#about-text {
+    text-align: justify;
+    margin-bottom: 10vh;
+}
+
+pink {
+    color: #c8a2c8;
+}
+
+/*  SECTION: PAGE STRUCTURE */
+
+.page-margin {
+    width: 70vw;
+    margin-left: 15vw;
+    font-family: GeneralText;
+    border: 1px solid #c8a2c8;
+    box-shadow: 1px 0px 15px 1px #c8a2c8;
+}
+
+#name-banner {
+    height: 30vh;
+    width: 100vw;
+    margin-left: 0;
+    background: rgb(238,174,202);
+    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
+    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1); 
+
+}
+
 #navigation-grid {
     display: grid;
-    grid: 15vh / 15vw 20vw 20vw 20vw 20vw;
-    column-gap: .5vw;
-    margin-top: 25vh;
+    grid: 15vh / 24% 24% 24% 24%;
+    column-gap: .5%;
+    margin-top: 1vh;
     margin-left: 1vw;
 }
 
-.navigation-tabs {
-    color: white;
-    border: 1px solid red;
-    /*  Removed after overlay removed   */
-    display: none;
-}
-
-#navigation-clients {
-    grid-column-start: 4;
-}
-
-
 /* From Uiverse.io by SujitAdroja */
 .navigation-tabs {
-    color: #c8a2c8;
+    color: silver;
     text-decoration: none;
     border: 1px solid #c8a2c8;
-    padding: 10px 20px;
     font-size: 1.5em;
     cursor: pointer;
     font-weight: bold;
@@ -185,11 +232,18 @@ path {
     overflow: hidden;
     font-family: PrettyText;
     border-radius: 10px 5px 10px 5px;
+    /*  Removed after overlay removed   */
+    display: none, flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 4vh;
 }
 
 .navigation-tabs:hover {
     color: white;
-    box-shadow: 1px 0x 15px 4px #c8a2c8;
+    box-shadow: 1px 0px 15px 1px #c8a2c8;
+
 }
 
 .navigation-tabs::before {
@@ -200,14 +254,16 @@ path {
     top: 0;
     left: -40px;
     transform: skewX(45deg);
-    background-color: purple;
+    background-color: #eeaeca;
     z-index: -1;
     transition: all 2s ease;
+    
 }
 
 .navigation-tabs:hover::before {
     width: 160%;
 }
+
 
 
 
