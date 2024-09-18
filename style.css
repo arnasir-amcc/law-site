@@ -23,7 +23,7 @@ body {
 
 /*  Added to class list in JavaScript on click event  */
 .overlay-remove {
-    top: -120vh; 
+    top: -120vh;
 }
 
 .overlay-centre-boxes {
@@ -66,15 +66,6 @@ body {
     font-size: 1vw;
     font-family: Subtitle;
 }
-
-
-/*  SECTION: ABOUT PAGE */
-
-.navigation-tabs {
-    color: white;
-    border: 1px solid red;
-}
-
 
 /*  BUTTONS */
 
@@ -154,6 +145,68 @@ path {
     bottom: unset;
     /* transform: translateY(-30px); */
     transition-duration: 0.5s
+}
+
+
+/*  SECTION: ABOUT PAGE */
+
+#navigation-grid {
+    display: grid;
+    grid: 15vh / 15vw 20vw 20vw 20vw 20vw;
+    column-gap: .5vw;
+    margin-top: 25vh;
+    margin-left: 1vw;
+}
+
+.navigation-tabs {
+    color: white;
+    border: 1px solid red;
+    /*  Removed after overlay removed   */
+    display: none;
+}
+
+#navigation-clients {
+    grid-column-start: 4;
+}
+
+
+/* From Uiverse.io by SujitAdroja */
+.navigation-tabs {
+    color: #c8a2c8;
+    text-decoration: none;
+    border: 1px solid #c8a2c8;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s ease;
+    overflow: hidden;
+    font-family: PrettyText;
+    border-radius: 10px 5px 10px 5px;
+}
+
+.navigation-tabs:hover {
+    color: white;
+    box-shadow: 1px 0x 15px 4px #c8a2c8;
+}
+
+.navigation-tabs::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: purple;
+    z-index: -1;
+    transition: all 2s ease;
+}
+
+.navigation-tabs:hover::before {
+    width: 160%;
 }
 
 
