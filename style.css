@@ -201,12 +201,13 @@ pink {
     width: 85vw;
     padding: 3vh;
     display: grid;
-    grid: 25vh 25vh 25vh 25vh/ 15vw 45vw 15vw;
+    grid: 30vh 25vh 25vh 25vh/ 15vw 45vw 15vw;
     gap: 20vh 5vw;
+    padding-bottom: 10vh;
+    margin-bottom: 20vh;
 }
 
 .qualifications-page-images {
-    border: 1px solid red; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -216,11 +217,11 @@ pink {
 
 .qualifications-page-descriptions {
     color: white;
-    border: 1px solid green;
     padding: 1vw;
     font-size: 1.1rem;
     height: 30vh;
     margin-top: -5vh;
+    border: 1px solid #eeaeca;
 }
 
 #qualifications-page-image1 {
@@ -243,6 +244,8 @@ pink {
     float: left;
     background-image: url(media/lincolns-inn.jpg);
     background-position-y: -1mm;
+    margin-top: -5vh;
+
 }
 
 #qualifications-page-description2 {
@@ -259,6 +262,8 @@ pink {
 #qualifications-page-image5 {
     float: left;
     background-image: url(media/BPP-340x340-1-300x300.png);
+    margin-top: -5vh;
+
 }
 
 #qualifications-page-description3 {
@@ -267,12 +272,18 @@ pink {
 
 #qualifications-page-image6 {
     float: right;
+    background-image: url(media/bpp.jpg);
+    height: 35vh;
+    margin-top: -5vh;
+    background-size: contain;
 }
 
 #qualifications-page-image7 {
     float: left;
     background-image: url(media/png-clipart-middlesex-university-hendon-higher-education-ming-ai-london-institute-student.png);
     width: 25vw;
+    margin-top: -5vh;
+    background-size: contain;
 }
 
 #qualifications-page-description4 {
@@ -282,6 +293,10 @@ pink {
 
 #qualifications-page-image8 {
     float: right;
+    background-image: url(media/mdx.jpg);
+    height: 35vh;
+    margin-top: -5vh;
+    background-size: contain;
 }
 
 /*  SECTION: PAGE STRUCTURE */
