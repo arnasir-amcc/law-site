@@ -54,7 +54,7 @@ body {
     width: 25vw;
     height: 20vh;
     transition: color 0.5s, transform 4s ease;
-    left: 35.5vw;
+    left: 35vw;
 }
 
 #overlay-name {
@@ -150,10 +150,15 @@ path {
 
 /*  SECTION: ABOUT PAGE */
 
+#everything {
+    opacity: 0;
+    display: none;
+    transition: opacity 2s;
+}
+
 #about {
     margin-top: 10vh;
     color: white;
-    padding: 3vh;
     font-size: 1.1rem;
 }
 
@@ -188,6 +193,59 @@ pink {
     color: #c8a2c8;
 }
 
+
+/*  SECTION: QUALIFICATIONS PAGE    */
+
+#qualifications-page-margin {
+    margin-left: 5vw;
+    width: 85vw;
+    padding: 3vh;
+    display: grid;
+    grid: 25vh 25vh 25vh/ 15vw 45vw 15vw;
+    gap: 10vh 5vw;
+}
+
+.qualifications-page-images {
+    border: 1px solid red; 
+    
+}
+
+.qualifications-page-descriptions {
+    color: white;
+    border: 1px solid green;
+
+}
+
+#qualifications-page-image1 {
+    float: left;
+}
+
+#qualifications-page-image1 {
+    float: right;
+}
+
+#qualifications-page-image1 {
+    float: left;
+    
+}
+
+#qualifications-page-image1 {
+    float: right;
+    
+}
+
+#qualifications-page-image1 {
+    float: left;
+    
+}
+
+#qualifications-page-image1 {
+    float: right;
+    
+}
+
+
+
 /*  SECTION: PAGE STRUCTURE */
 
 .page-margin {
@@ -196,18 +254,43 @@ pink {
     font-family: GeneralText;
     border: 1px solid #c8a2c8;
     box-shadow: 1px 0px 15px 1px #c8a2c8;
+    color: white;
+    margin-top: 10vh;
+
 }
 
 #name-banner {
+    margin-top: 0;
     height: 30vh;
-    width: 100vw;
+    width: 99vw;
     margin-left: 0;
+    opacity: 80%;
     background: rgb(238,174,202);
-    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
-    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
-    background: radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(148,187,233,1) 87%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#94bbe9",GradientType=1); 
+    background: -moz-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(145,6,186,1) 87%);
+    background: -webkit-radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(145,6,186,1) 87%);
+    background: radial-gradient(circle, rgba(238,174,202,1) 32%, rgba(145,6,186,1) 87%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca",endColorstr="#9106ba",GradientType=1); 
+}
 
+#name-box {
+    text-align: center;
+    color: white;
+    margin: 2vw;
+    width: 25vw;
+    height: 20vh;
+    transition: color 0.5s, transform 4s ease;
+    left: 35vw;
+    top: 4vh;
+}
+
+#name {
+    font-size: 3vw;
+    font-family: PrettyText;
+}
+
+#subtitle {
+    font-size: 1vw;
+    font-family: Subtitle;
 }
 
 #navigation-grid {
@@ -215,15 +298,15 @@ pink {
     grid: 15vh / 24% 24% 24% 24%;
     column-gap: .5%;
     margin-top: 1vh;
-    margin-left: 1vw;
+    margin-left: 2vw;
 }
 
 /* From Uiverse.io by SujitAdroja */
 .navigation-tabs {
-    color: silver;
+    color: #c8a2c8;
     text-decoration: none;
     border: 1px solid #c8a2c8;
-    font-size: 1.5em;
+    font-size: 1.7em;
     cursor: pointer;
     font-weight: bold;
     background: transparent;
@@ -264,6 +347,11 @@ pink {
     width: 160%;
 }
 
+footer {
+    color: white;
+    text-align: center;
+    margin-top: 4vh;
+}
 
 
 

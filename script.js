@@ -6,6 +6,67 @@ function fadeIn() {
 }
 
 
+/*  SECTION: NAVIGATION FUNCTIONALITY   */
+
+
+// OnClick events for each navigation tab.
+document.getElementById("navigation-about").onclick = toAboutPage;
+document.getElementById("navigation-qualifications").onclick = toQualificationsPage;
+document.getElementById("navigation-clients").onclick = toClientsPage;
+document.getElementById("navigation-contact").onclick = toContactPage;
+
+// Checks which page you're on, and changes navigation bar tab to white accordingly.
+switch (window.location.pathname.split('/').pop()) {
+    case 'index.html':
+        document.getElementById("navigation-about").style.color = 'white';
+        break;
+    case 'qualifications.html':
+        document.getElementById("navigation-qualifications").style.color = 'white';
+        break;
+    case 'clients.html':
+        document.getElementById("navigation-clients").style.color = 'white';
+        break;
+    case 'contact.html':
+        document.getElementById("navigation-contact").style.color = 'white';
+        break;
+    default:
+        // Do nothing if the page doesn't match
+        break;
+}
+
+function navigateTo(page) {
+    location.href = page + '.html';
+}
+
+function cleanUrl() {
+    if (window.location.pathname.endsWith('.html')) {
+        const newUrl = window.location.pathname.replace('.html', '');
+        window.history.replaceState({}, document.title, newUrl);
+    }
+}
+
+function toAboutPage() {
+    navigateTo('index');
+}
+
+function toQualificationsPage() {
+    navigateTo('qualifications');
+}
+
+function toClientsPage() {
+    navigateTo('clients');
+}
+
+function toContactPage() {
+    navigateTo('contact');
+}
+
+// Execute URL cleaning after navigation on page load
+window.onload = cleanUrl;
+
+
+
+/*  SECTION: FOOTER INJECTION   */
 
 
 function injectFooter() {
@@ -23,6 +84,13 @@ function injectFooter() {
     document.body.appendChild(footer);
 }
 
+/*  SECTION: WINDOW CONDITIONALS    */
+
+
+/* SECTION: INITIAL ANIMATIONS AND OVERLAY   */
+
+
+const everything = document.getElementById('everything');
 const overlayBoxes = document.querySelectorAll('.overlay-centre-boxes');
 const landingOverlay = document.getElementById('landing-page-overlay');
 const overlayNameBackground = document.getElementById('overlay-name-background');
@@ -66,7 +134,10 @@ button.addEventListener('click', function () {
         landingOverlay.style.display = 'none';
         button.style.display = 'none';
         overlayNameBackground.style.display = 'none';
-        mainDiv.style.display = 'block';
+        everything.style.display = 'block';
+        setTimeout(() => {
+            everything.style.opacity = '1';
+        }, 1000);
 
     }, 4000);
 
