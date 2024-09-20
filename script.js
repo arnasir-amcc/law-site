@@ -6,38 +6,45 @@ function fadeIn() {
 }
 
 
-/*  SECTION: NAVIGATION FUNCTIONALITY   */
+// Wait for the DOM to be fully loaded before adding event listeners
+document.addEventListener('DOMContentLoaded', function() {
 
+    // OnClick events for each navigation tab.
+    document.getElementById("navigation-about").onclick = toAboutPage;
+    document.getElementById("navigation-qualifications").onclick = toQualificationsPage;
+    document.getElementById("navigation-clients").onclick = toClientsPage;
+    document.getElementById("navigation-contact").onclick = toContactPage;
 
-// OnClick events for each navigation tab.
-document.getElementById("navigation-about").onclick = toAboutPage;
-document.getElementById("navigation-qualifications").onclick = toQualificationsPage;
-document.getElementById("navigation-clients").onclick = toClientsPage;
-document.getElementById("navigation-contact").onclick = toContactPage;
+    // Checks which page you're on, and changes navigation bar tab to white accordingly.
+    switch (window.location.pathname.split('/').pop()) {
+        case 'index.html':
+            document.getElementById("navigation-about").style.color = 'white';
+            break;
+        case 'qualifications.html':
+            document.getElementById("navigation-qualifications").style.color = 'white';
+            break;
+        case 'clients.html':
+            document.getElementById("navigation-clients").style.color = 'white';
+            break;
+        case 'contact.html':
+            document.getElementById("navigation-contact").style.color = 'white';
+            break;
+        default:
+            // Do nothing if the page doesn't match
+            break;
+    }
 
-// Checks which page you're on, and changes navigation bar tab to white accordingly.
-switch (window.location.pathname.split('/').pop()) {
-    case 'index.html':
-        document.getElementById("navigation-about").style.color = 'white';
-        break;
-    case 'qualifications.html':
-        document.getElementById("navigation-qualifications").style.color = 'white';
-        break;
-    case 'clients.html':
-        document.getElementById("navigation-clients").style.color = 'white';
-        break;
-    case 'contact.html':
-        document.getElementById("navigation-contact").style.color = 'white';
-        break;
-    default:
-        // Do nothing if the page doesn't match
-        break;
-}
+    // Clean URL if necessary
+    cleanUrl();
 
+});
+
+// Navigate to specific pages
 function navigateTo(page) {
     location.href = page + '.html';
 }
 
+// Clean the URL by removing ".html" extension
 function cleanUrl() {
     if (window.location.pathname.endsWith('.html')) {
         const newUrl = window.location.pathname.replace('.html', '');
@@ -61,8 +68,6 @@ function toContactPage() {
     navigateTo('contact');
 }
 
-// Execute URL cleaning after navigation on page load
-window.onload = cleanUrl;
 
 
 
