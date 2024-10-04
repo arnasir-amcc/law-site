@@ -42,6 +42,7 @@ body {
     background-color: black;
     opacity: 65%;
     transition: opacity 1s ease, transform 4s ease;
+    border-radius: 2%;
 }
 
 /* This distinction was made so the 'child' could keep 100% opacity
@@ -85,7 +86,7 @@ body {
 #overlay-button {
     width: 3vw;
     height: 3vw;
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: rgb(20, 20, 20);
     border: none;
     font-weight: 600;
